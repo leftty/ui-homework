@@ -58,12 +58,10 @@ RUN chmod -R go-rwx /tmp/* /tmp/.[!.]*
 RUN chmod 1777 /tmp/.X11-unix
 RUN chmod 1777 /tmp
 
-USER root
+USER remoteuser
 
 RUN mkdir /home/remoteuser/serenity-project
 
 WORKDIR /home/remoteuser/serenity-project
 
 RUN git clone https://github.com/leftty/ui-homework.git
-
-RUN cd ui-homework
